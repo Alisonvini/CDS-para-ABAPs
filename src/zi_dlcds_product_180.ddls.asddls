@@ -25,5 +25,7 @@ define view entity ZI_DLCDS_PRODUCT_180
        when prodduct_type = 1 then 'X'
        when prodduct_type = 2 then 'X'
        when prodduct_type = 3 or prodduct_type = 4 then 'X'
-       else '' end        as Case2
+       else '' end        as Case2,
+       
+       $session.user as UserName
 }
