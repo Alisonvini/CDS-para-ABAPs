@@ -7,6 +7,8 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
+
+@AbapCatalog.entityBuffer.definitionAllowed: true
 define view entity ZI_DLCDS_PRODUCT_180
   as select from zdlt_product180
 {
@@ -25,7 +27,7 @@ define view entity ZI_DLCDS_PRODUCT_180
        when prodduct_type = 1 then 'X'
        when prodduct_type = 2 then 'X'
        when prodduct_type = 3 or prodduct_type = 4 then 'X'
-       else '' end        as Case2,
+       else '' end        as Case2
        
-       $session.user as UserName
+       //$session.user as UserName Não pode usar variaveis de sistema quando se tem @AbapCatalog.entityBuffer.definitionAllowed: true
 }

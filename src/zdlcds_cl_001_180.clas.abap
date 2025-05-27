@@ -13,7 +13,9 @@ ENDCLASS.
 
 
 
-CLASS zdlcds_cl_001_180 IMPLEMENTATION.
+CLASS ZDLCDS_CL_001_180 IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
     TYPES tt_product TYPE TABLE OF zdlt_product180 WITH DEFAULT KEY.
@@ -41,6 +43,4 @@ CLASS zdlcds_cl_001_180 IMPLEMENTATION.
     out->write( 'Dados Inserirod scom sucesso' ).
 
   ENDMETHOD.
-
 ENDCLASS.
-
