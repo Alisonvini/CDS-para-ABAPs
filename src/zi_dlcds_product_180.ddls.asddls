@@ -9,7 +9,7 @@
 }
 
 @AbapCatalog.entityBuffer.definitionAllowed: true
-define view entity ZI_DLCDS_PRODUCT_180
+define root view entity ZI_DLCDS_PRODUCT_180
   as select from zdlt_product180
 {
   key product             as Product,

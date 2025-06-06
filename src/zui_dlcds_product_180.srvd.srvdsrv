@@ -1,0 +1,5 @@
+@EndUserText.label: 'UI - Produto'
+@AbapCatalog.extensibility.extensible: true
+define service ZUI_DLCDS_PRODUCT_180 {
+  expose ZC_DLCDS_PRODUCT_180;
+}
