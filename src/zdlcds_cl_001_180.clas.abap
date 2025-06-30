@@ -32,10 +32,10 @@ CLASS ZDLCDS_CL_001_180 IMPLEMENTATION.
      TYPES tt_order_it TYPE TABLE OF zdlt_order_it180 WITH DEFAULT KEY.
 
     DATA(lt_order_it) = VALUE tt_order_it(
-       (  sales_order = 1 sales_order_item = 1 product = 1 product_quantity = 1 total_value = 10 )
-       (  sales_order = 1 sales_order_item = 2 product = 2 product_quantity = 2 total_value = 20 )
-       (  sales_order = 2 sales_order_item = 3 product = 3 product_quantity = 10 total_value = 30 )
-       (  sales_order = 2 sales_order_item = 1 product = 4 product_quantity = 15 total_value = 1000 )
+       (  sales_order = 1 sales_order_item = 1 product = 1 product_quantity = 1  product_unity = 'KI' total_value = 10   currency = 'EUR' )
+       (  sales_order = 1 sales_order_item = 2 product = 2 product_quantity = 2  product_unity = 'KI' total_value = 20   currency = 'EUR' )
+       (  sales_order = 2 sales_order_item = 3 product = 3 product_quantity = 10 product_unity = 'KI' total_value = 30   currency = 'EUR' )
+       (  sales_order = 2 sales_order_item = 1 product = 4 product_quantity = 15 product_unity = 'KI' total_value = 1000 currency = 'EUR' )
     ).
 
     MODIFY zdlt_order_it180 FROM TABLE @lt_order_it.
