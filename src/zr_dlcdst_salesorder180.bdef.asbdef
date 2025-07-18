@@ -1,0 +1,27 @@
+managed implementation in class zbp_r_dlcdst_salesorder180 unique;
+strict ( 2 );
+
+define behavior for Zr_DLCDST_salesorder180 //alias <alias_name>
+persistent table zdlcdst_order180
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) SalesOrder;
+  association _Item { create; }
+}
+
+define behavior for zr_dlcds_salesorder_it180 //alias <alias_name>
+persistent table zdlt_order_it180
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) SalesOrder, SalesOrderItem;
+  association _Header;
+}

@@ -1,0 +1,5 @@
+CLASS zbp_r_dlcdst_salesorder180 DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_dlcdst_salesorder180.
+ENDCLASS.
+
+CLASS zbp_r_dlcdst_salesorder180 IMPLEMENTATION.
+ENDCLASS.
